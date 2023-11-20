@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function soma(n1, n2) {
+    return n1 + n2;
+}
+
+function subtração (n1, n2) {
+    return n1 - n2;
+}
+
+function multiplicação (n1, n2) {
+    return n1 * n2;
+}
+
+function divisão (n1, n2) {
+    return n1 / n2;
+}
+        opcao=prompt('Você deseja realizar qual tipo de operação? (1 - soma, 2 - subtração, 3 - multiplicação, 4 - divisão ou 5 - encerrar')
+        while(opcao!="5"){
+        n1 = parseInt(prompt("Digite um número"));
+        n2 = parseInt(prompt("Digite um segundo número"));
+            if (opcao==1) {
+                Resultado=soma(n1,n2)
+            }
+
+            if (opcao==2) {
+                Resultado=subtração(n1,n2)
+            }
+
+            if (opcao==3) {
+                Resultado=multiplicação(n1,n2)
+            }
+
+            if (opcao==4) {
+                Resultado=divisão(n1,n2)
+            }
+            alert ("O resultado da sua operação é "+ Resultado +".")
+            opcao=prompt('Você deseja realizar qual tipo de operação? (1 - soma, 2 - subtração, 3 - multiplicação, 4 - divisão ou 5 - encerrar')
+        }
+        alert ("Operação finalizada com sucesso.")
+    </script>
+</body>
+</html>

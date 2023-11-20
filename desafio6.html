@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>desafio6</title>
+</head>
+<body>
+
+<script>
+
+let comida = "";
+let categoria = "";
+let frutas = [];
+let doces = [];
+let bebidas = [];
+let removcomida = [];
+
+
+let resposta = "sim"; 
+while (resposta == "sim") {
+resposta = prompt("Você deseja adicionar uma comida na sua lista de compras? (sim ou não)");
+
+while (resposta != "sim" && resposta != "não") {
+alert ("Essa resposta é inválida")
+resposta = prompt("Você deseja adicionar uma comida na sua lista de compras? (sim ou não)");
+
+}
+
+if (resposta != "sim") {
+  break;
+}
+
+
+comida = prompt ("Qual produto você gostaria de adicionar?")
+categoria = prompt ("Qual a categoria do produto? (frutas, doces ou bebidas)")
+  
+if (categoria == "frutas") {
+frutas.push (comida);
+} 
+
+else if (categoria == "doces") {
+doces.push (comida);
+}
+
+ else if (categoria == "bebidas") {
+ bebidas.push (comida);
+ }
+
+ else {
+        alert("Essa categoria não foi pré-definida.")
+    }
+
+  }
+
+alert ("Lista de compras: \n frutas: "  +frutas+ " \n doces: " +doces+ " \n bebidas: " +bebidas+ ".")
+
+
+if (resposta = "não") {
+  let remover = prompt("Você deseja remover uma comida na sua lista de compras? (sim ou não)");
+  while (remover != "sim" && remover != "não") {
+alert ("Essa resposta é inválida")
+remover = prompt("Você remover uma comida na sua lista de compras? (sim ou não)");
+
+}
+
+if (remover === "sim") {
+
+  if(frutas.length === 0  && doces.length === 0 && bebidas.length === 0){
+} 
+else { 
+    remover = prompt("Lista de compras:\n  Frutas:" +frutas+ "\n  Doces:" +doces+ "\n  bebidas:"  +bebidas+ "\n Qual produto você deseja remover?");
+    if(frutas.indexOf(remover) != -1){
+        frutas.splice(frutas.indexOf(remover), 1);
+        alert(`O item ${remover} foi removido com sucesso!`)
+    } 
+   else if (doces.indexOf(remover) != -1){
+        doces.splice(doces.indexOf(remover), 1);
+        alert(`O item ${remover} foi removido com sucesso!`)
+    } 
+else if (bebidas.indexOf(remover) != -1){
+        bebidas.splice(bebidas.indexOf(remover), 1);
+        alert(`O item ${remover} foi removido com sucesso!`)
+    } 
+else {
+        alert(`Não foi possível encontrar o item dentro da lista!`)
+    }
+
+
+
+ alert ("Lista de compras: \n frutas: "  +frutas+ " \n doces: " +doces+ " \n bebidas: " +bebidas+ ".")
+  }
+}
+}
+
+</script>
+  
+</body>
+</html>

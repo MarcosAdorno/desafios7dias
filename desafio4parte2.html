@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>desafio4(2)</title>
+</head>
+<body>
+
+<script>
+
+let qualquernum = Math.floor(Math.random() * (10 - 0 + 1) + 0);;
+let escolha = "";
+let acertou = false
+
+for (numero = 0; numero < 3; numero++) {
+escolha = prompt ("Escolha um número de 1 a 10.")
+if (escolha == qualquernum) {
+
+alert ("Parabéns, você acertou!");
+acertou = true;
+break;
+}
+alert ("Errou!")
+}
+
+if (!acertou) {
+
+
+alert ("Errado! Acabaram suas tentativas, o número era: " +qualquernum+ ".");
+}
+
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+    let area = prompt (" Qual é o sua área de atuação? ( Front-End ou Back-End )")
+    let ling = "";
+
+    if (area === "Front-End") { 
+    ling = prompt (" Qual é o sua especialização? ( React ou Vue ) ");
+    
+    }
+    else if (area === "Back-End"){
+    ling = prompt("Você quer aprender C# ou Java?");
+    }
+    
+    else {
+    
+    alert (" Você não escolheu uma alternativa válida")
+    }
+
+    let especi = prompt (" digite 1: para seguir se especializando ou digite 2: para seguir se desenvolvendo para se tornar Fullstack");
+    if (especi == 1) {
+    alert (" Continue se especializando na área" +area+ " e na linguagem " +ling+ ".");
+    
+    }
+
+    else if (especi == 2) {
+    alert ("Siga se desenvolvendo para se tornar fullstack");
+
+    }
+
+    else {
+    
+    alert (" Você não escolheu uma alternativa válida")
+    }
+
+    
+    let tec = prompt ("Gostaria de se especializar em mais alguma tecnologia? (sim ou não)")
+    while (tec === "sim") {
+        let novatec = prompt ("Qual?")
+        alert (" A tecnologia " +novatec+ " é bem interessante!" )
+        
+        tec = prompt ("Gostaria de se especializar em mais alguma tecnologia?")
+    }
+        </script>
+    </body>
+    </html>
